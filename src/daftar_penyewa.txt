@@ -1,0 +1,6 @@
+Data Penyewa Baru:
+ID: 123
+Nama: adityaa
+Alamat: cilacap
+Nomor Telepon: 081215996780
+Email: adit@gmail.com

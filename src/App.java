@@ -1,5 +1,8 @@
 import java.util.Date;
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -65,6 +68,7 @@ public class App {
     System.out.print("Masukkan pilihan anda (1-5): ");
     int pilihan = input.nextInt();
     
+    while (pilihan != 7) {
     // Melakukan tindakan sesuai dengan pilihan user
     switch (pilihan) {
         case 1:
@@ -76,6 +80,19 @@ public class App {
             System.out.println("Jumlah Kamar : " + kos.getJumlahKamar());
             System.out.println("Harga Sewa : " + kos.getHargaSewa());
             System.out.println("Fasilitas : " + kos.getFasilitas());
+            // cetak ouput ke file txt
+            try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
+                writer.println("Informasi Kos:");
+                writer.println("ID: " + kos.getId());
+                writer.println("Nama : " + kos.getNama());
+                writer.println("Alamat : " + kos.getAlamat());
+                writer.println("Jumlah Kamar : " + kos.getJumlahKamar());
+                writer.println("Jumlah Kamar : " + kos.getJumlahKamar());
+                writer.println("Harga Sewa : " + kos.getHargaSewa());
+                writer.println("Fasilitas : " + kos.getFasilitas());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
             break;
         case 2:
             // Menampilkan informasi penyewa
@@ -85,6 +102,17 @@ public class App {
             System.out.println("Alamat : " + penyewa.getAlamat());
             System.out.println("Nomor Telepon : " + penyewa.getNomorTelepon());
             System.out.println("Email : " + penyewa.getEmail());
+            // cetak ouput ke file txt
+            try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
+                writer.println("Informasi Penyewa:");
+                writer.println("ID: " + penyewa.getId());
+                writer.println("Nama : " + penyewa.getNama());
+                writer.println("Alamat : " + penyewa.getAlamat());
+                writer.println("Nomor Telepon : " + penyewa.getNomorTelepon());
+                writer.println("Email : " + penyewa.getEmail());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
             break;
         case 3:
             // Menampilkan informasi pemesanan
@@ -97,6 +125,20 @@ public class App {
             System.out.println("Tanggal Check-out: " + pemesanan.getTanggalCheckout());
             System.out.println("Jumlah Hari: " + pemesanan.getJumlahHari());
             System.out.println("Harga Total: " + pemesanan.getHargaTotal());
+            // cetak ouput ke file txt
+            try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
+                writer.println("Informasi Pemesanan:");
+                writer.println("ID: " + pemesanan.getId());
+                writer.println("Nama Penyewa: " + pemesanan.getPenyewa().getNama());
+                writer.println("Nama Kos: " + pemesanan.getKos().getNama());
+                writer.println("Tanggal Pesan: " + pemesanan.getTanggalPesan());
+                writer.println("Tanggal Check-in: " + pemesanan.getTanggalCheckin());
+                writer.println("Tanggal Check-out: " + pemesanan.getTanggalCheckout());
+                writer.println("Jumlah Hari: " + pemesanan.getJumlahHari());
+                writer.println("Harga Total: " + pemesanan.getHargaTotal());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
             break;
             case 4:
             // Menampilkan informasi pembayaran
@@ -125,6 +167,18 @@ public class App {
             kosBaru.setFasilitas(input.nextLine());
             // Menambahkan objek kosBaru ke dalam daftar kos
             // ...
+            try (PrintWriter writer = new PrintWriter(new File("daftar_kos.txt"))) {
+                writer.println("Data Kos Baru:");
+                writer.println("ID: " + kosBaru.getId());
+                writer.println("Nama: " + kosBaru.getNama());
+                writer.println("Alamat: " + kosBaru.getAlamat());
+                writer.println("Jumlah Kamar: " + kosBaru.getJumlahKamar());
+                writer.println("Harga Sewa: " + kosBaru.getHargaSewa());
+                writer.println("Fasilitas: " + kosBaru.getFasilitas());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            
             break;
         case 6:
             // Menambahkan data penyewa
@@ -142,18 +196,34 @@ public class App {
             penyewaBaru.setEmail(input.nextLine());
             // Menambahkan objek penyewaBaru ke dalam daftar penyewa
             // ...
-            break;
-            case 7:
-            // Keluar dari program
-            System.out.println("Terima kasih telah menggunakan program ini.");
-            break;
-            default:
-            // Menampilkan pesan error jika pilihan tidak valid
-            System.out.println("Pilihan tidak valid. Silakan coba lagi.");
-            break;
+                        // Menuliskan data penyewa ke dalam file
+            try (PrintWriter writer = new PrintWriter(new File("daftar_penyewa.txt") )) {
+                writer.println("Data Penyewa Baru:");
+                writer.println("ID: " + penyewaBaru.getId());
+                writer.println("Nama: " + penyewaBaru.getNama());
+                writer.println("Alamat: " + penyewaBaru.getAlamat());
+                writer.println("Nomor Telepon: " + penyewaBaru.getNomorTelepon());
+                writer.println("Email: " + penyewaBaru.getEmail());
+            } catch (IOException ex) {
+                ex.printStackTrace();
             }
+            break;
+        }
+         // Menampilkan menu pilihan kembali
+        System.out.println("MANAJEMEN KOS - KOSAN GARUDA MERAH ");
+        System.out.println("1. Tampilkan informasi kos");
+        System.out.println("2. Tampilkan informasi penyewa");
+        System.out.println("3. Tampilkan informasi pemesanan");
+        System.out.println("4. Tampilkan informasi pembayaran");
+        System.out.println("5. Tambahkan data kos");
+        System.out.println("6. Tambahkan data penyewa");
+        System.out.println("7. Keluar");
+        System.out.print("Pilihan Anda: ");
+        pilihan = input.nextInt();
+          
             }
-            }
+        System.out.println("Terima kasih telah menggunakan program ini.");
+    }}
 
 
 // public class App {
