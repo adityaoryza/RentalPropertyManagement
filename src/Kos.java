@@ -1,6 +1,4 @@
 public class Kos {
-   
-
     private int id;
     private String nama;
     private String alamat;
@@ -8,12 +6,12 @@ public class Kos {
     private int hargaSewa;
     private String fasilitas;
     public Kos() {
-        // this.id = id;
-        // this.nama = nama;
-        // this.alamat = alamat;
-        // this.jumlahKamar = jumlahKamar;
-        // this.hargaSewa = hargaSewa;
-        // this.fasilitas = fasilitas;
+        this.id = id;
+        this.nama = nama;
+        this.alamat = alamat;
+        this.jumlahKamar = jumlahKamar;
+        this.hargaSewa = hargaSewa;
+        this.fasilitas = fasilitas;
     }
 
     public int getId() {
