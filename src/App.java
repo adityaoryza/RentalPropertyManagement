@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        System.out.println("MANAJEMEN KOS - KOSAN GARUDA MERAH ");
+        System.out.println("=========== MANAJEMEN KOS - KOSAN GARUDA MERAH ==========");
         
         // Membuat objek kelas Scanner untuk input dari user
         Scanner input = new Scanner(System.in);
@@ -67,19 +66,20 @@ public class App {
     // Meminta input tindakan dari user
     System.out.print("Masukkan pilihan anda (1-5): ");
     int pilihan = input.nextInt();
-    
     while (pilihan != 7) {
     // Melakukan tindakan sesuai dengan pilihan user
     switch (pilihan) {
         case 1:
-            // Menampilkan informasi kos
-            System.out.println("Informasi Kos:");
-            System.out.println("ID: " + kos.getId());
-            System.out.println("Nama : " + kos.getNama());
-            System.out.println("Alamat : " + kos.getAlamat());
-            System.out.println("Jumlah Kamar : " + kos.getJumlahKamar());
-            System.out.println("Harga Sewa : " + kos.getHargaSewa());
-            System.out.println("Fasilitas : " + kos.getFasilitas());
+             System.out.println("================================================================");
+             // Menampilkan informasi kos
+             System.out.println("Informasi Kos:");
+             System.out.println("ID: " + kos.getId());
+             System.out.println("Nama : " + kos.getNama());
+             System.out.println("Alamat : " + kos.getAlamat());
+             System.out.println("Jumlah Kamar : " + kos.getJumlahKamar());
+             System.out.println("Harga Sewa : " + kos.getHargaSewa());
+             System.out.println("Fasilitas : " + kos.getFasilitas());
+             System.out.println("================================================================");
             // cetak ouput ke file txt
             try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
                 writer.println("Informasi Kos:");
@@ -95,6 +95,7 @@ public class App {
             }
             break;
         case 2:
+            System.out.println("================================================================");
             // Menampilkan informasi penyewa
             System.out.println("Informasi Penyewa:");
             System.out.println("ID: " + penyewa.getId());
@@ -102,6 +103,7 @@ public class App {
             System.out.println("Alamat : " + penyewa.getAlamat());
             System.out.println("Nomor Telepon : " + penyewa.getNomorTelepon());
             System.out.println("Email : " + penyewa.getEmail());
+            System.out.println("================================================================");
             // cetak ouput ke file txt
             try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
                 writer.println("Informasi Penyewa:");
@@ -115,6 +117,7 @@ public class App {
             }
             break;
         case 3:
+            System.out.println("================================================================");
             // Menampilkan informasi pemesanan
             System.out.println("Informasi Pemesanan:");
             System.out.println("ID: " + pemesanan.getId());
@@ -125,6 +128,7 @@ public class App {
             System.out.println("Tanggal Check-out: " + pemesanan.getTanggalCheckout());
             System.out.println("Jumlah Hari: " + pemesanan.getJumlahHari());
             System.out.println("Harga Total: " + pemesanan.getHargaTotal());
+            System.out.println("================================================================");
             // cetak ouput ke file txt
             try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
                 writer.println("Informasi Pemesanan:");
@@ -141,14 +145,17 @@ public class App {
             }
             break;
             case 4:
+            System.out.println("================================================================");
             // Menampilkan informasi pembayaran
             System.out.println("Informasi Pembayaran:");
             System.out.println("ID: " + pembayaran.getId());
             System.out.println("ID Pemesanan: " + pembayaran.getPemesanan().getId());
             System.out.println("Tanggal Pembayaran: " + pembayaran.getTanggalPembayaran());
             System.out.println("Jumlah Pembayaran: " + pembayaran.getJumlahPembayaran());
+            System.out.println("================================================================");
             break;
             case 5:
+            System.out.println("================================================================");
             // Menambahkan data kos
             Kos kosBaru = new Kos();
             System.out.print("Masukkan ID kos: ");
@@ -165,6 +172,7 @@ public class App {
             System.out.print("Masukkan fasilitas kos: ");
             input.nextLine(); // Membaca baris kosong di buffer
             kosBaru.setFasilitas(input.nextLine());
+            System.out.println("================================================================");
             // Menambahkan objek kosBaru ke dalam daftar kos
             // ...
             try (PrintWriter writer = new PrintWriter(new File("daftar_kos.txt"))) {
@@ -181,6 +189,7 @@ public class App {
             
             break;
         case 6:
+        System.out.println("================================================================");
             // Menambahkan data penyewa
             Penyewa penyewaBaru = new Penyewa();
             System.out.print("Masukkan ID penyewa: ");
@@ -194,6 +203,7 @@ public class App {
             penyewaBaru.setNomorTelepon(input.nextLine());
             System.out.print("Masukkan email penyewa: ");
             penyewaBaru.setEmail(input.nextLine());
+            System.out.println("================================================================");
             // Menambahkan objek penyewaBaru ke dalam daftar penyewa
             // ...
                         // Menuliskan data penyewa ke dalam file

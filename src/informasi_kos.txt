@@ -2,8 +2,8 @@ Informasi Pemesanan:
 ID: 1
 Nama Penyewa: John Doe
 Nama Kos: Kos ABC
-Tanggal Pesan: Sun Jan 01 11:07:13 WIB 2023
-Tanggal Check-in: Sun Jan 01 11:07:13 WIB 2023
-Tanggal Check-out: Sun Jan 01 11:07:13 WIB 2023
+Tanggal Pesan: Sun Jan 01 13:26:00 WIB 2023
+Tanggal Check-in: Sun Jan 01 13:26:00 WIB 2023
+Tanggal Check-out: Sun Jan 01 13:26:00 WIB 2023
 Jumlah Hari: 30
 Harga Total: 3000000
