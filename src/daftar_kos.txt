@@ -1,7 +1,7 @@
 Data Kos Baru:
-ID: 12
-Nama: kos syariah
-Alamat: bantul selatan
-Jumlah Kamar: 8
-Harga Sewa: 900000
-Fasilitas: kamar mandi dalam, wc duduk, ac , wifi
+ID: 121
+Nama: dfd
+Alamat: fgfgf
+Jumlah Kamar: 3
+Harga Sewa: 50000
+Fasilitas: kofgfgf
