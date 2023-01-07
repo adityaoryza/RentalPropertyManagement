@@ -1,6 +1,6 @@
-Informasi Penyewa:
-ID: 1
-Nama : Aditya Oryza
-Alamat : Jalan Munggur Timur
-Nomor Telepon : 081234567890
-Email : Oryza429@gmail.com
+Data Penyewa Baru:
+ID: 43
+Nama: mahendra
+Alamat: glugo sewon yogyakarta
+Nomor Telepon: 0823792473
+Email: oryza@yahoo.com

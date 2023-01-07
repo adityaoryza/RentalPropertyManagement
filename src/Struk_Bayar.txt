@@ -1,5 +1,5 @@
 Data Kos Baru:
 ID: 1
 ID Pemesanan: 1
-Tanggal Pembayaran: Sat Jan 07 14:59:07 WIB 2023
+Tanggal Pembayaran: Sat Jan 07 17:18:47 WIB 2023
 Jumlah Pembayaran: 3000000

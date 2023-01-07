@@ -1,9 +1,7 @@
-Informasi Pemesanan:
-ID: 1
-Nama Penyewa: Aditya Oryza
-Nama Kos: Kos Normal
-Tanggal Pesan: Sat Jan 07 14:59:07 WIB 2023
-Tanggal Check-in: Sat Jan 07 14:59:07 WIB 2023
-Tanggal Check-out: Sat Jan 07 14:59:07 WIB 2023
-Jumlah Hari: 30
-Harga Total: 3000000
+Data Kos Baru:
+ID: 123
+Nama: kos mewahh
+Alamat: sleman, UNY
+Jumlah Kamar: 9
+Harga Sewa: 950000
+Fasilitas: kamar mandi dalam, ac, isian, dapur bersama.
