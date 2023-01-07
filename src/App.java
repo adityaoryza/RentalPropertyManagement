@@ -6,35 +6,25 @@ import java.io.PrintWriter;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("=========== MANAJEMEN KOS - KOSAN GARUDA MERAH ==========");
-        
         // Membuat objek kelas Scanner untuk input dari user
         Scanner input = new Scanner(System.in);
         
         // Membuat objek kelas Kos
         Kos kos = new Kos();
         kos.setId(1);
-        kos.setNama("Kos ABC");
-        kos.setAlamat("Jalan ABC No. 123");
+        kos.setNama("Kos Normal");
+        kos.setAlamat("Jalan Solo Yogyakarta");
         kos.setJumlahKamar(10);
         kos.setHargaSewa(100000);
         kos.setFasilitas("Kamar mandi dalam, dapur bersama, TV");
 
-        // Membuat objek kelas Kos yang baru
-        Kos kos2 = new Kos();
-        kos2.setId(2);
-        kos2.setNama("Kos DEF");
-        kos2.setAlamat("Jalan DEF No. 789");
-        kos2.setJumlahKamar(12);
-        kos2.setHargaSewa(120000);
-        kos2.setFasilitas("Kamar mandi dalam, dapur bersama, TV, kolam renang");
-
         // Membuat objek kelas Penyewa
         Penyewa penyewa = new Penyewa();
         penyewa.setId(1);
-        penyewa.setNama("John Doe");
-        penyewa.setAlamat("Jalan XYZ No. 456");
+        penyewa.setNama("Aditya Oryza");
+        penyewa.setAlamat("Jalan Munggur Timur");
         penyewa.setNomorTelepon("081234567890");
-        penyewa.setEmail("john.doe@example.com");
+        penyewa.setEmail("Oryza429@gmail.com");
 
         // Membuat objek kelas Pemesanan
         Pemesanan pemesanan = new Pemesanan();
@@ -72,7 +62,7 @@ public class App {
         case 1:
              System.out.println("================================================================");
              // Menampilkan informasi kos
-             System.out.println("Informasi Kos:");
+             System.out.println("========== INFORMASI KOS ==========");
              System.out.println("ID: " + kos.getId());
              System.out.println("Nama : " + kos.getNama());
              System.out.println("Alamat : " + kos.getAlamat());
@@ -97,7 +87,7 @@ public class App {
         case 2:
             System.out.println("================================================================");
             // Menampilkan informasi penyewa
-            System.out.println("Informasi Penyewa:");
+            System.out.println("========== INFORMASI PENYEWA ==========");
             System.out.println("ID: " + penyewa.getId());
             System.out.println("Nama : " + penyewa.getNama());
             System.out.println("Alamat : " + penyewa.getAlamat());
@@ -105,7 +95,7 @@ public class App {
             System.out.println("Email : " + penyewa.getEmail());
             System.out.println("================================================================");
             // cetak ouput ke file txt
-            try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
+            try (PrintWriter writer = new PrintWriter(new File("daftar_penyewa.txt"))) {
                 writer.println("Informasi Penyewa:");
                 writer.println("ID: " + penyewa.getId());
                 writer.println("Nama : " + penyewa.getNama());
@@ -119,7 +109,7 @@ public class App {
         case 3:
             System.out.println("================================================================");
             // Menampilkan informasi pemesanan
-            System.out.println("Informasi Pemesanan:");
+            System.out.println("========== INFORMASI PEMESANAN ==========");
             System.out.println("ID: " + pemesanan.getId());
             System.out.println("Nama Penyewa: " + pemesanan.getPenyewa().getNama());
             System.out.println("Nama Kos: " + pemesanan.getKos().getNama());
@@ -144,19 +134,29 @@ public class App {
                 ex.printStackTrace();
             }
             break;
-            case 4:
+        case 4:
             System.out.println("================================================================");
             // Menampilkan informasi pembayaran
-            System.out.println("Informasi Pembayaran:");
+            System.out.println("========== INFORMASI PEMBAYARAN ==========");
             System.out.println("ID: " + pembayaran.getId());
             System.out.println("ID Pemesanan: " + pembayaran.getPemesanan().getId());
             System.out.println("Tanggal Pembayaran: " + pembayaran.getTanggalPembayaran());
             System.out.println("Jumlah Pembayaran: " + pembayaran.getJumlahPembayaran());
             System.out.println("================================================================");
+            try (PrintWriter writer = new PrintWriter(new File("Struk_Bayar.txt"))) {
+                writer.println("Data Kos Baru:");
+                writer.println("ID: " + pembayaran.getId());
+                writer.println("ID Pemesanan: " + pembayaran.getPemesanan().getId());
+                writer.println("Tanggal Pembayaran: " + pembayaran.getTanggalPembayaran());
+                writer.println("Jumlah Pembayaran: " + pembayaran.getJumlahPembayaran());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
             break;
             case 5:
             System.out.println("================================================================");
             // Menambahkan data kos
+            System.out.println("========== TAMBAH DATA KOS BARU ==========");
             Kos kosBaru = new Kos();
             System.out.print("Masukkan ID kos: ");
             kosBaru.setId(input.nextInt());
@@ -175,7 +175,7 @@ public class App {
             System.out.println("================================================================");
             // Menambahkan objek kosBaru ke dalam daftar kos
             // ...
-            try (PrintWriter writer = new PrintWriter(new File("daftar_kos.txt"))) {
+            try (PrintWriter writer = new PrintWriter(new File("informasi_kos.txt"))) {
                 writer.println("Data Kos Baru:");
                 writer.println("ID: " + kosBaru.getId());
                 writer.println("Nama: " + kosBaru.getNama());
@@ -189,8 +189,9 @@ public class App {
             
             break;
         case 6:
-        System.out.println("================================================================");
+            System.out.println("================================================================");
             // Menambahkan data penyewa
+            System.out.println("========== TAMBAH DATA PENYEWA BARU ==========");
             Penyewa penyewaBaru = new Penyewa();
             System.out.print("Masukkan ID penyewa: ");
             penyewaBaru.setId(input.nextInt());

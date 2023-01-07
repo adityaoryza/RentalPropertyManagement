@@ -1,7 +1,7 @@
 
 import java.util.Date;
 
-public class Pembayaran {
+public class Pembayaran implements ManajemenKos {
     private int id;
     private Pemesanan pemesanan;
     private Date tanggalPembayaran;
@@ -40,5 +40,20 @@ public class Pembayaran {
 
     public void setJumlahPembayaran(int jumlahPembayaran) {
         this.jumlahPembayaran = jumlahPembayaran;
+    }
+
+    @Override
+    public void tambahPenyewa() {
+        
+    }
+
+    @Override
+    public void tambahKos() {
+        
+    }
+
+    @Override
+    public void lihatInformasi() {
+        
     }
 }

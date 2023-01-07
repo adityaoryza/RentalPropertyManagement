@@ -1,6 +1,6 @@
-Data Penyewa Baru:
-ID: 32
-Nama: oryza
-Alamat: sleman
-Nomor Telepon: 081215996780
-Email: oryza@gmail.com
+Informasi Penyewa:
+ID: 1
+Nama : John Doe
+Alamat : Jalan XYZ No. 456
+Nomor Telepon : 081234567890
+Email : john.doe@example.com

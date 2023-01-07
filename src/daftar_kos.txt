@@ -1,7 +1,7 @@
 Data Kos Baru:
-ID: 121
-Nama: dfd
-Alamat: fgfgf
-Jumlah Kamar: 3
-Harga Sewa: 50000
-Fasilitas: kofgfgf
+ID: 5501
+Nama: kos uhuy
+Alamat: jogja
+Jumlah Kamar: 5
+Harga Sewa: 900000
+Fasilitas: kamar mandi dalem, ac

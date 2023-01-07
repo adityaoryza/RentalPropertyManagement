@@ -1,4 +1,4 @@
-public class Penyewa {
+public class Penyewa implements ManajemenKos {
     private int id;
     private String nama;
     private String alamat;
@@ -47,5 +47,20 @@ public class Penyewa {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public void tambahPenyewa() {
+        
+    }
+
+    @Override
+    public void tambahKos() {
+        
+    }
+
+    @Override
+    public void lihatInformasi() {
+        
     }
 }

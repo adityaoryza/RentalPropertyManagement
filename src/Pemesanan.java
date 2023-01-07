@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Pemesanan {
+public class Pemesanan implements ManajemenKos {
     private int id;
     private Penyewa penyewa;
     private Kos kos;
@@ -75,5 +75,20 @@ public class Pemesanan {
 
     public void setHargaTotal(int hargaTotal) {
         this.hargaTotal = hargaTotal;
+    }
+
+    @Override
+    public void tambahPenyewa() {
+        
+    }
+
+    @Override
+    public void tambahKos() {
+        
+    }
+
+    @Override
+    public void lihatInformasi() {
+        
     }
 }

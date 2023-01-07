@@ -1,9 +1,8 @@
-Informasi Pemesanan:
+Informasi Kos:
 ID: 1
-Nama Penyewa: John Doe
-Nama Kos: Kos ABC
-Tanggal Pesan: Fri Jan 06 19:35:33 WIB 2023
-Tanggal Check-in: Fri Jan 06 19:35:33 WIB 2023
-Tanggal Check-out: Fri Jan 06 19:35:33 WIB 2023
-Jumlah Hari: 30
-Harga Total: 3000000
+Nama : Kos ABC
+Alamat : Jalan ABC No. 123
+Jumlah Kamar : 10
+Jumlah Kamar : 10
+Harga Sewa : 100000
+Fasilitas : Kamar mandi dalam, dapur bersama, TV
