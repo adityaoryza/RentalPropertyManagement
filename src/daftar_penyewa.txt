@@ -1,6 +1,6 @@
 Informasi Penyewa:
 ID: 1
-Nama : John Doe
-Alamat : Jalan XYZ No. 456
+Nama : Aditya Oryza
+Alamat : Jalan Munggur Timur
 Nomor Telepon : 081234567890
-Email : john.doe@example.com
+Email : Oryza429@gmail.com

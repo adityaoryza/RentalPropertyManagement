@@ -1,8 +1,9 @@
-Informasi Kos:
+Informasi Pemesanan:
 ID: 1
-Nama : Kos ABC
-Alamat : Jalan ABC No. 123
-Jumlah Kamar : 10
-Jumlah Kamar : 10
-Harga Sewa : 100000
-Fasilitas : Kamar mandi dalam, dapur bersama, TV
+Nama Penyewa: Aditya Oryza
+Nama Kos: Kos Normal
+Tanggal Pesan: Sat Jan 07 14:59:07 WIB 2023
+Tanggal Check-in: Sat Jan 07 14:59:07 WIB 2023
+Tanggal Check-out: Sat Jan 07 14:59:07 WIB 2023
+Jumlah Hari: 30
+Harga Total: 3000000
